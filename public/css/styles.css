@@ -1,3 +1,8 @@
+@import 'reset/mixins';
+@import 'reset/variables';@import 'reset/reset';
+@import 'reset/keyframes';
+@import url(./login.css);
+@import url(./general.css);
 @font-face{
     font-family: "Crenzo";
     font-style: normal;
@@ -64,8 +69,9 @@ padding: 10px;
 
 /*main*/
 
-.banner img{
+section.slider{
     display: none;
+    height:10%;
 }
 article {
     width: 100%;
@@ -76,6 +82,7 @@ article .image-container {
     text-align: center;
     margin-left: 10%;
     margin-right: 10%;
+    background-color: black;
 
 }
 article img.photo{
@@ -98,7 +105,11 @@ padding: 8px;
 }
 article h4 {
     margin: 20px 0;
+    color: burlywood;
 
+}
+article .description{
+    color: burlywood;
 }
 article a.more {
     display: block;
@@ -147,19 +158,67 @@ footer nav ul li a {
         padding: 0%;
     }
 /*main*/
-    .banner img{
+   /* .banner img{
         display: flex;
         width: 100%;
         margin-bottom: 20px;
-
-    }
-    section.products{
+        text-align: center;
+        width: 80%;
+        padding: 0 10% 0 10%;
+    }*/
+  
+/*section.products{
         display: flex;
         flex-wrap: wrap;
         justify-content:space-between ;
-        width: 100%
+       
 
-    }
+    }*/
+    
+section.slider{
+    display: block;
+    background-color: blueviolet;
+    width: 80%;
+    padding: 10% 10% ;
+    height: 80%;
+    overflow: hidden;
+
+}
+section.slider img{
+    width: 100%;
+    height: 90%;
+}
+.slider ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 30%;
+    animation: cambio 20s infinite
+    alternate linear;
+    width: 400%;
+}.slider ul li{
+    width: 80%;
+    height: 30%;
+    list-style: none;
+}
+.slider img{
+    width: 20%;
+    list-style: none;
+}
+
+
+@keyframes cambio {
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+    75%{margin-left: -300%;}
+    100%{margin-left: -100%;}
+
+}
     article {
         display: flex;
         flex-wrap: wrap;
@@ -177,6 +236,9 @@ footer nav ul li a {
     margin-right: 0%;
 
     }
+    article .description{
+        padding-bottom: 10px;
+    }
     article img.photo{
         width: 100%;
         
@@ -188,12 +250,22 @@ footer nav ul li a {
 header nav ul li {
     font-size: 1rem;
 }
+header nav ul li:hover{
+    font-size: 1,1rem;
+    background-color: darkblue;
+}
+header nav ul li a:hover{
+    color: white;
+}
 article{
 width: 100%;
 }
 article .image-container{
     flex-direction: row;
     width: 30%;
+}
+article .letras{
+    background-color: antiquewhite;
 }
 
 

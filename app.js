@@ -9,6 +9,7 @@ app.get('/',(req,res) => res.sendFile(path.join(views, 'home.html')));
 app.get('/ensayos',(req,res) => res.sendFile(path.join(views, 'ensayos.html')));
 app.get('/integrantes',(req,res) => res.sendFile(path.join(views, 'integrantes.html')));
 app.get('/presentaciones',(req,res) => res.sendFile(path.join(views, 'presentaciones.html')));
+app.get('/login',(req,res) => res.sendFile(path.join(views, 'login.html')));
 
 
 
